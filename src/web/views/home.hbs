@@ -1,0 +1,89 @@
+
+<main>
+    <div>
+        <h1 class="exchange-title"><a href="/all">ALL</a></h1>
+    </div>
+    {{!-- <table>
+            <thead>
+                <tr>
+                    <th>Coin</th>
+                    <th>Funding Value</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each data}}
+                <tr>
+                    <td>{{coin}}</td>
+                    <td>{{funding}}</td>
+                    <td>{{time}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+    </table> --}}
+
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                {{#each exchanges}}
+                    <th><a href="http://localhost:80/{{title}}">{{title}}</a></th>
+                {{/each}}
+            </tr>
+        </thead>
+
+        <tbody>
+            {{#each data}}
+            <tr>
+                <td>{{@key}}</td>
+                {{#each this}}
+                    <td>{{this}}</td>
+                {{/each}}
+            </tr>
+            {{/each}}
+        </tbody>
+
+    </table>
+
+
+
+</main>
+
+
+
+
+
+
+
+
+
+<script>
+
+    const socket = new WebSocket('ws://localhost:{{port}}');
+
+    socket.onopen = function(event) {
+        console.log('Connection established');
+    };
+
+    socket.onmessage = function(event) {
+        {{!-- const messagesDiv = document.getElementById('messages'); --}}
+        {{!-- messagesDiv.innerHTML += '<p>' + blobToString(event.data) + '</p>'; --}}
+        {{!-- messagesDiv.innerHTML += '<p>' + event.data + '</p>'; --}}
+
+        console.log(event.data);
+    };
+
+    socket.onclose = function(event) {
+        console.log('Connection closed');
+    };
+
+    function sendMessage() {
+        const messageInput = document.getElementById('messageInput');
+        const message = messageInput.value;
+        socket.send(message);
+        messageInput.value = '';
+    }
+
+</script>

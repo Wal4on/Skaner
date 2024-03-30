@@ -1,0 +1,48 @@
+[   
+    {
+        "title": "okx",
+        "coins": "https://www.okx.com/api/v5/public/instruments",
+        "funding": "https://www.okx.com/api/v5/public/funding-rate"
+    },
+    {
+        "title": "binance",
+        "coins": "https://fapi.binance.com/fapi/v1/exchangeInfo",
+        "funding": "https://fapi.binance.com/fapi/v1/premiumIndex"
+    },
+    {
+        "title": "bingx",
+        "coins": "https://open-api.bingx.com/openApi/swap/v2/quote/premiumIndex",
+        "funding": "https://open-api.bingx.com/openApi/swap/v2/quote/premiumIndex"
+    },
+    {
+        "title": "bybit",
+        "coins": "https://api.bybit.com/v5/market/tickers",
+        "funding": "https://api.bybit.com/v5/market/tickers"
+    },
+    {
+        "title": "gate",
+        "coins": "https://api.gateio.ws/api/v4/futures/usdt/contracts",
+        "funding": "https://api.gateio.ws/api/v4/futures/usdt/contracts"
+    },
+    {
+        "title": "htx",
+        "coins": "https://api.hbdm.com/linear-swap-api/v1/swap_batch_funding_rate",
+        "funding": "https://api.hbdm.com/linear-swap-api/v1/swap_batch_funding_rate"
+    },
+    {
+        "title": "kraken",
+        "coins": "https://futures.kraken.com/derivatives/api/v3/tickers",
+        "funding": "https://futures.kraken.com/derivatives/api/v3/tickers"
+    },
+    {
+        "title": "mexc",
+        "coins": "https://contract.mexc.com/api/v1/contract/funding_rate",
+        "funding": "https://contract.mexc.com/api/v1/contract/funding_rate"
+    },
+    {
+        "title": "bitget",
+        "coins": "https://api.bitget.com/api/v2/mix/market/tickers",
+        "funding": "https://api.bitget.com/api/v2/mix/market/tickers"
+    }
+    
+]
