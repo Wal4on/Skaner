@@ -49,7 +49,7 @@ app.get('/', async (req, res) => {
     }
 });
 
-app.get('/:exchange', async (req, res) => {
+app.get('/:exchange', async (req, res) => { // sdlfsldkfkls
     try {
         // console.log('req.params :>> ', req.params);
         const exchangeTitle = req.params.exchange;
